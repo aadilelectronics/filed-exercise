@@ -1,0 +1,13 @@
+.container {
+  width: 90vw;
+  max-width: 1366px;
+  height: 95vh;
+  min-height: 600px;
+  margin: auto;
+}
+
+.content-div {
+  position: relative;
+  height: calc(100% - 64px);
+  width: 100%;
+}

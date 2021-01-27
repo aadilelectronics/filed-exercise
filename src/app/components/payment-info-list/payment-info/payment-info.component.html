@@ -1,0 +1,19 @@
+<div
+  class="card-container p-p-3"
+  [ngClass]="{
+    'visa-bg': paymentInfo.cardNumber.startsWith('4'),
+    'master-bg': paymentInfo.cardNumber.startsWith('5')
+  }"
+>
+  <div class="card-number-box p-my-1">
+    <span class="label">Card Number</span> {{ paymentInfo.cardNumber }}
+  </div>
+  <div class="name-box p-my-1"><span class="label">Name</span>{{ paymentInfo.cardHolderName }}</div>
+  <div class="cvv-box p-my-1" *ngIf="paymentInfo.securityCode">
+    <span class="label">CVV</span>{{ paymentInfo.securityCode }}
+  </div>
+  <div class="validity-box p-my-1">
+    <span class="label">Valid Upto</span>{{ paymentInfo.expiryDate | date: 'MM/dd/yyyy' }}
+  </div>
+  <div class="amount-box p-my-1"><span class="label">Amount</span>${{ paymentInfo.amount }}</div>
+</div>

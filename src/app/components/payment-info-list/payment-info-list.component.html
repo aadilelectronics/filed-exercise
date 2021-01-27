@@ -1,0 +1,13 @@
+<div class="sticky-btn-container">
+  <button pButton pRipple class="" label="Add Payment Info" (click)="addInfoClicked()"></button>
+</div>
+<p-scrollPanel [style]="{ width: '100%', height: '500px' }">
+  <ng-container *ngIf="allInfoList$ | async as pInfoList; else noData">
+    <div class="p-d-inline-flex p-flex-row p-flex-wrap">
+      <app-payment-info *ngFor="let info of pInfoList" [paymentInfo]="info"></app-payment-info>
+    </div>
+  </ng-container>
+  <ng-template #noData>
+    <p>No Payment Info yet.</p>
+  </ng-template>
+</p-scrollPanel>

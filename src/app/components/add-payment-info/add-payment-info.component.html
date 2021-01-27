@@ -1,0 +1,47 @@
+<form [formGroup]="paymentInfoFG" (ngSubmit)="submitPaymentInfo()">
+  <div class="p-fluid p-formgrid p-grid">
+    <div class="p-field p-col-12">
+      <label for="cardNumber">Card Number</label>
+      <input pInputText type="number" formControlName="cardNumber" id="cardNumber" />
+    </div>
+    <div class="p-field p-col-12">
+      <label for="name">Card Holder Name</label>
+      <input type="text" pInputText formControlName="cardHolderName" id="name" />
+    </div>
+    <div class="p-field p-col-12">
+      <label for="expDate">Expiry Date</label>
+      <p-calendar
+        formControlName="expiryDate"
+        [readonlyInput]="true"
+        [minDate]="minDate"
+      ></p-calendar>
+    </div>
+    <div class="p-field p-col-12 p-md-6">
+      <label for="cvv">Security Code</label>
+      <input pInputText type="number" formControlName="securityCode" id="cvv" />
+    </div>
+    <div class="p-field p-col-12 p-md-6">
+      <label for="amount">Amount</label>
+      <input pInputText type="number" formControlName="amount" id="amount" />
+    </div>
+    <div class="p-field p-col-12 p-sm-6 p-pt-4">
+      <button
+        pButton
+        pRipple
+        class="p-button-raised p-button-warning"
+        type="button"
+        label="Reset"
+      ></button>
+    </div>
+    <div class="p-field p-col-12 p-sm-6 p-pt-4">
+      <button
+        pButton
+        pRipple
+        class="p-button-raised p-button-success"
+        type="submit"
+        label="Save"
+        [disabled]="paymentInfoFG.invalid"
+      ></button>
+    </div>
+  </div>
+</form>

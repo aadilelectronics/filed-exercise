@@ -1,0 +1,63 @@
+.card-container {
+  width: 25rem;
+  height: 11rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.125rem 1rem rgba(10, 10, 10, 0.25);
+  background: linear-gradient(
+    79.72deg,
+    rgba(0, 204, 255, 0.89) -13.72%,
+    rgba(6, 206, 99, 0.911) 117.72%
+  );
+  margin: 1rem;
+  color: #fff !important;
+}
+
+.card-number-box {
+  font-weight: 700;
+  font-style: italic;
+  font-size: 1.25rem;
+  font-stretch: extra-expanded;
+}
+
+.name-box {
+  font-weight: 700;
+}
+
+.cvv-box {
+  font-weight: 700;
+}
+
+.validity-box {
+  font-style: italic;
+}
+
+.amount-box {
+  font-weight: 700;
+  font-style: italic;
+  font-size: 24px;
+}
+
+.visa-bg {
+  background: linear-gradient(
+    45deg,
+    rgba(37, 37, 233, 0.882),
+    rgba(77, 133, 236, 0.835)
+  ) !important;
+}
+.master-bg {
+  background: linear-gradient(
+    45deg,
+    rgba(230, 45, 45, 0.904),
+    rgba(235, 126, 37, 0.904)
+  ) !important;
+}
+
+span.label {
+  width: 6rem;
+  text-align: right;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.75rem;
+  padding-right: 1rem;
+  display: inline-block;
+}
